@@ -1,0 +1,55 @@
+#loader-bg {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgb(255, 255, 255);
+    z-index: 100000000;
+}
+#loader {
+    display: none;
+    position: fixed;
+    margin: 50vh auto 0;
+	transform: translateY(-50%);
+	color: rgb(0, 0, 0);
+	text-align: center;
+    width: 100vw;
+    top: 20vh;
+    font-size: 30px
+}
+#loader-img{
+    max-width: 718px;
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@media screen and ( max-width:767px) {
+    #loader-img{
+        max-width: 300px
+    }
+}
+
+/*-----------The typing effect------------*/
+
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+.typewriter p {
+margin: 0 auto;
+width: 14ch;
+border-right: .08em solid;
+overflow: hidden;
+white-space: nowrap;
+animation: typing 1s steps(11, end), caret .5s step-end infinite;
+}

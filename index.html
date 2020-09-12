@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--サイトタイトル-->
+    <title>メガネさんのポートフォリオ</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--ローディング-->
+    <script>
+        $(function () {
+            var h = $(window).height();
+            $('#wrap').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
+        });
+        $(window).on("load", function () {
+            $('#loader-bg').delay(2000).fadeOut(800);
+            $('#loader').delay(1000).fadeOut(700);
+            $('#wrap').css('display', 'block');
+        });
+        $(function () {
+            setTimeout('stopload()', 1000);
+        });
+        function stopload() {
+            $('#wrap').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
+    </script>
+    <!--CSS::基本-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--CSS::ローディング-->
+    <link href="css/loading.css" rel="stylesheet" type="text/css">
+    <!--CSS::スライドショー-->
+    <link rel="stylesheet" type="text/css" href="css/slide2.css">
+    <!--CSS::プロフィール-->
+    <link href="css/profilebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きな食べ物-->
+    <link href="css/likebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアニメ-->
+    <link href="css/card.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアーティスト-->
+    <link href="css/artist.css" rel="stylesheet" type="text/css">
+    <!--CSS::文字揺れ-->
+    <link href="css/moji-yure.css" rel="stylesheet" type="text/css">
+    <!--js::コンテンツフェード-->
+    <script>
+    $(function () {
+        $(window).scroll(function () {
+            $('.fadein').each(function () {
+                var targetElement = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > targetElement - windowHeight + 200) {
+                    $(this).css('opacity', '1');
+                    $(this).css('transform', 'translateY(0)');
+                }
+            });
+        });
+    });
+    </script>
+    <!--フォント-->
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <!--ハンバーガーメニュー-->
+    <link href="css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.fatNav.js"></script>
+    <script>
+        $(function() {
+            $.fatNav();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="img/logo.png" alt="Now Loading" id="loader-img"/>
+            <div class="typewriter">
+                <p>Now Loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="fat-nav pc-none">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="index.html" class="glitch" data-text="TOP PAGE">TOP PAGE</a></li>
+                <li><a href="hobby/index.html" class="glitch" data-text="HOBBY">HOBBY</a></li>
+                <li><a href="history/index.html" class="glitch" data-text="HISTORY">HISTORY</a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <a href="index.html" class="hd_logo">
+            <img src="img/logo.png" alt="メガネ男のポートフォリオ" id="logo">
+        </a>
+    </header>
+    <div id="wrap">
+        <main>
+            <div id="particleground">
+                <article>
+                    <h1 class="slide_text1">楽しいこと、大好き!!</h1>
+                    <ul class="cb-slideshow">
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </article>
+                <article class="main_column"  id="particle">
+                    <section class="fadein">
+                        <h2>プロフィール</h2>
+                        <div class="profile_column">
+                            <img src="img/my_icon.png" class="profile_column_box profile_img">
+                            <p class="profile_column_box">
+                                僕の名前は、嘉手川 航太朗（かでかわ こうたろう）と申します。<br>
+                                日本電子専門学校のwebデザイン科に通っています。<br>
+                                <br>
+                                楽しいことや面白いことに目がなく、さまざまなことをしてきました。<br>
+                                漫画やイラストを描いたり、小説を書いて大賞へ応募したり、ゲームを作ってコミックマーケットへ参加したり……<br>
+                                <br>
+                                志望職種はフロントエンジニア、またはバックエンドエンジニアです。<br>
+                                今までの経験を生かして、デザイナーの考えたデザインの良さを100%見る人に伝えることのできるよう人になりたいです。
+                            </p>
+                        </div>
+                    </section>
+                    <section class="skile fadein">
+                        <h2>スキル</h2>
+                        <h3>持っている資格</h3>
+                        <p>・数学検定3級</p>
+                        <h3>ちょっと自信があること</h3>
+                        <p>・HTML</p>
+                        <p>・ティラノスクリプト</p>
+                        <h3>人並にできること</h3>
+                        <p>・CSS</p>
+                        <p>・SCSS</p>
+                        <p>・Vue.js</p>
+                        <p>・jquery.js</p>
+                        <p>・イラスト</p>
+                        <p>・ドット絵</p>
+                        <p>・Live2D</p>
+                        <h3>少しできること</h3>
+                        <p>・C、C+</p>
+                        <p>・3Dモデルのモデリング</p>
+                        <p>・動画編集</p>
+                        <p>・Unity</p>
+                        <h3>今後できるようになる予定</h3>
+                        <p>・PHP</p>
+                        <p>・JavaScript</p>
+                        <p>・Python</p>
+                    </section>
+                    <section class="fadein">
+                        <h2>今まで作ってきたwebサイト</h2>
+                        <div class="link-card-bg">
+                            <a href="sitelist/01/index.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="img/site-01.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>日の当たらない倉庫</h3>
+                                        <p>
+                                            初めて学校で作った自己紹介サイトです。<br>
+                                            暗い印象を与えるということで没となりました…汗<br>
+                                            まだHTMLを始めたばかりの頃に作ったので、コードがバラバラです。<br>
+                                            こだわったポイントは、全体のイメージの統一です。<br>
+                                            制作時期：2019年4月頃
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="sitelist/02/index.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="img/site-02.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>嘉手川航太朗です</h3>
+                                        <p>
+                                            「日の当たらない倉庫」を改良したサイトです。<br>
+                                            明るい印象にしたかったので、よく見る動画背景を真似してみました。<br>
+                                            全画面の動画背景にこだわりました。<br>
+                                            制作時期：2019年4月頃
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="sitelist/03/index.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="img/site-03.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>嘉手川航太朗です。</h3>
+                                        <p>
+                                            「嘉手川航太朗です」を改良したサイトです。<br>
+                                            学校で新しく習ったことをフルに活用しました。<br>
+                                            初めてレスポンシブにしてみたサイトです。<br>
+                                            制作時期：2019年5月頃
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="sitelist/04/index.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="img/site-04.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>嘉手川航太朗なのです！</h3>
+                                        <p>
+                                            「嘉手川航太朗です。」を改良したサイト。<br>
+                                            ハンバーガーメニューっぽいものを設置しています。<br>
+                                            ローディング画面も作ってみました。<br>
+                                            制作時期：2019年5月頃
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="use/index.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="img/site-06.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>メガネさんのポートフォリオ</h3>
+                                        <p>
+                                            1から作り直した自己紹介サイトです。<br>
+                                            ローディングから動きまでこだわって作りました。<br>
+                                            デザインのイメージとしては、人型ロボットのコックピットです。<br>
+                                            制作時期：2019年9月下旬
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </article>
+                <div style="text-align: center; padding-top: 3px;"><small>Copyright © Kadekawa Koutarou</small></div>
+            </main>
+        </div>
+        <footer>      
+            <div class="hm-menu-btn"></div>
+            <div class="footer"></div>
+        </footer>
+        <!--白ふわふわ-->
+        <script src="js/snowfall.jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).snowfall({
+                flakeCount: 300,			// 要素の数
+                flakeColor: '#FFF',		// 要素の色
+                flakeIndex: -1,		// 要素のz-index
+                minSize: 3,				// 要素の最小サイズ
+                maxSize: 10,				// 要素の最大サイズ
+                minSpeed: 4,				// 要素の最小落下スピード
+                maxSpeed: 6,				// 要素の最大落下スピード
+                round: true,				// 要素に丸みを持たせる？
+                shadow: false				// 要素に影をつける？
+            });
+        </script>
+    </body>
+</html>

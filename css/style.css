@@ -1,0 +1,260 @@
+/*--------------リセット--------------------*/
+*{
+    padding: 0px;
+    margin: 0px
+}
+/*-----------------------------------------*/
+
+/*-----------------基本--------------------*/
+p{
+    color: #1f1f1f
+}
+small{
+    color: #1f1f1f;
+}
+h2 {
+    margin: 0.5em 0.5em 0.5em 0;/*文字周りの余白*/
+    color: #1f1f1f;/*文字色*/
+    border-bottom: solid 3px #0096c8;
+    max-width: 50%;
+}
+h2:before{
+    content:"●";
+    color: #0096c8;/*文字色*/
+}
+@media screen and (max-width:1200px){
+    h2 {
+        margin: 0.5em 0.5em 0.5em 0;/*文字周りの余白*/
+        color: #1f1f1f;/*文字色*/
+        border-bottom: solid 3px #0096c8;
+        max-width: 100%;
+    }
+}
+
+/*-----------------------------------------*/
+
+/*-------------メインカラム設定--------------*/
+main{/*headerの分スペースを開けています。*/
+    margin-top: 50px;
+    margin-bottom: 150px
+}
+body{
+    background:linear-gradient(#0f43c8 20%,#3961d0 50%,#a4b6e6);
+}
+/*-----------------------------------------*/
+
+/*-----------------ロゴ--------------------*/
+#logo{
+    display: inline-block;
+    width: 300px;
+    margin:0 auto;
+    display:block;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.hd_logo{
+    display: inline-block;
+    width: 450px;
+    height: 110px;
+    margin:0 auto;
+    display:block;
+    background-color: #ffffff;
+    border-radius: 0 0 300px 300px;
+    position: relative;
+}
+
+@media screen and ( max-width:767px) {
+    #logo{
+        width: 170px
+    }
+    .hd_logo{
+        display: inline-block;
+        width: 260px;
+        height: 66px;
+        margin:0 auto;
+        display:block;
+        background-color: #ffffff;
+        border-radius: 0 0 200px 200px;
+    }
+}
+
+/*-----------------------------------------*/
+
+/*-----------------ヘッダー--------------------*/
+header{
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    top:0;
+    left:0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000000;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.829));
+}
+@media screen and ( max-width:767px) {
+    header{
+        position: fixed;
+        width: 100vw;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        top:0;
+        left:0;
+        z-index: 1000000;
+    }
+}
+/*-----------------------------------------*/
+
+
+/*---------------メインカラム---------------*/
+.main_column{
+    margin-top: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px 20px 20px
+}
+.main_column_sub{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px 20px 20px
+}
+.space_sub{
+    margin-top: 40px
+}
+.space_sub2{
+    margin-top: 10vh
+}
+.scroll-info{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-color:  transparent transparent #565656 #565656;
+    transform: rotate(-45deg);
+}
+.scroll-info::before{
+    content: "SLIDE";
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-left: -4px;
+}
+.fuwafuwa{
+    position: fixed;
+    bottom: 100px;
+    transform: rotate(-45deg);
+    animation: sc-text 3s linear infinite;
+    transform-origin: 50% 50%;
+    margin: 1rem 0 !important;
+}
+.skile h3{
+    margin-top: 14px
+}
+@keyframes sc-text {
+    0% { transform: translateY(0) }
+    33.33333% { transform: translateY(-10px) }
+    66.66667% { transform: translateY(0) }
+    100% { transform: translateY(0) }
+}
+
+
+@media screen and (min-width:1200px) {
+    .main_column{
+        width: 1160px;
+        margin: 0 auto;
+        margin-top: 100vh
+    }
+    .main_column_sub{
+        width: 1160px;
+        margin: 0 auto;
+        margin-top: 40px
+    }
+    .space_sub2{
+        margin-top: 10vh
+    }
+}
+/*-----------------------------------------*/
+
+/*-------------スライドのテキスト------------*/
+.slide_text1{
+    position: absolute;
+    top: 34vh;
+    z-index: 1000;
+    font-size: 9vw;
+    color: #ffffff;
+    margin-left: 6vw;
+    text-shadow:0px 0px 5px #000000;
+    font-family: "Sawarabi Mincho";
+}
+@media screen and ( max-width:768px) {
+    .slide_text1{
+        top: 44vh;
+    }
+}
+/*-----------------------------------------*/
+
+/*-----------------フッター--------------------*/
+footer{
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    bottom:0;
+    left:0;
+    filter: drop-shadow(0px -8px 8px rgba(0, 0, 0, 0.829));
+    z-index: 100000;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom:0;
+    left:0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000000;
+}
+@media screen and ( max-width:767px) {
+    footer{
+        width: 100%;
+        height: 110px;
+    }
+    .footer{
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        bottom:0;
+        left:0;
+        z-index: 1000000;
+    }
+}
+/*-----------------------------------------*/
+
+/*-----------------ftロゴ--------------------*/
+.hm-menu-btn{
+    display: inline-block;
+    width: 450px;
+    height: 90px;
+    margin:0 auto;
+    display:block;
+    background-color: #ffffff;
+    border-radius: 300px 300px 0 0;
+}
+@media screen and ( max-width:767px) {
+    .hm-menu-btn{
+        display: inline-block;
+        width: 170px;
+        height: 50px;
+        margin:0 auto;
+        margin-top: 20px;
+        display:block;
+        background-color: #ffffff;
+        border-radius: 200px 200px 0 0;
+    }
+}
+
+/*-----------------------------------------*/

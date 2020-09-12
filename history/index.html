@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--サイトタイトル-->
+    <title>HOBBY | メガネさんのポートフォリオ</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--ローディング-->
+    <script>
+    $(function() {
+        var h = $(window).height();
+        $('#wrap').css('display','none');
+        $('#loader-bg ,#loader').height(h).css('display','block');
+    });
+    $(window).on("load",function () {
+        $('#loader-bg').delay(2000).fadeOut(800);
+        $('#loader').delay(1000).fadeOut(700);
+        $('#wrap').css('display', 'block');
+    });
+    $(function(){
+        setTimeout('stopload()',1000);
+    });
+    function stopload(){
+        $('#wrap').css('display','block');
+        $('#loader-bg').delay(900).fadeOut(800);
+        $('#loader').delay(600).fadeOut(300);
+    }
+    </script>
+    <!--CSS::基本-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--CSS::ローディング-->
+    <link href="../css/loading.css" rel="stylesheet" type="text/css">
+    <!--CSS::スライドショー-->
+    <link rel="stylesheet" type="text/css" href="../css/slide2.css">
+    <!--CSS::プロフィール-->
+    <link href="../css/profilebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きな食べ物-->
+    <link href="../css/likebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアニメ-->
+    <link href="../css/card.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアーティスト-->
+    <link href="../css/artist.css" rel="stylesheet" type="text/css">
+    <!--CSS::文字揺れ-->
+    <link href="../css/moji-yure.css" rel="stylesheet" type="text/css">
+    <!--フォント-->
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <!--ハンバーガーメニュー-->
+    <link href="../css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.fatNav.js"></script>
+    <script>
+        $(function() {
+            $.fatNav();
+        });
+    </script>
+    <!--年表-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                menu: '#menu',
+            });
+        });
+    </script>
+    <link href="../css/history.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="hd_logo">
+            <img src="../img/logo.png" alt="メガネ男のポートフォリオ" id="logo" />
+        </a>
+    </header>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/logo.png" alt="Now Loading" id="loader-img"/>
+            <div class="typewriter">
+                <p>Now Loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="fat-nav pc-none">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="../index.html" class="glitch" data-text="TOP PAGE">TOP PAGE</a></li>
+                <li><a href="../hobby/index.html" class="glitch" data-text="HOBBY">HOBBY</a></li>
+                <li><a href="index.html" class="glitch" data-text="HISTORY">HISTORY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrap">
+            <main>
+                <article class="main_column_sub"  id="particle">
+                    <div class="fuwafuwa">
+                        <div class="scroll-info">
+                        </div>
+                    </div>
+                    <div id="fullpage">
+                        <div class="section">
+                            <h3 class="space_sub2">嘉手川航太朗の年表</h3>
+                            <p>僕が生まれ、そして今までを年表にしました。</p>
+                            <p>下へスマホならスライド、PCならスクロールしてお楽しみください。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2000年</h3>
+                            <p>僕、生まれる。</p>
+                            <p>親から名を頂く。</p>
+                            <p>嘉手川は沖縄に多い名前で、航太朗は航空機みたいに飛び立つ朗らかで太い心をもった……的なことを言っていたけど覚えていません(笑)(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2001年</h3>
+                            <p>天使のような笑顔で、よく女の子と間違えられる。（by母）</p>
+                            <br>
+                            <p>果たして、なぜその天使が僕になってしまったのか。(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2002年</h3>
+                            <p>虫が好き、ダンゴムシとお友達。（by母）</p>
+                            <br>
+                            <p>虫が何で動けるのかすら知らなかったので、当時はその動く物体に興味を抱いていたのかもしれない。(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2003年</h3>
+                            <p>生まれてくる弟の名前を勝手に考え、母のおなかに呼び続けるが、親に拒否される。</p>
+                            <p>いいじゃないですか、僕が「航太朗」なら弟は「シンタロー」「キンタロー」でも！！(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2004年</h3>
+                            <p>超絶イケメンの弟が生まれる。（by弟）</p>
+                            <br>
+                            <p>あー、ね。うちの弟は陸上とサッカーできちゃう超イケメン。バレンタインでチョコもらいまくるくらいにね。自慢の弟です、はい(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2005年</h3>
+                            <p>ムシキングにハマる。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                            <br>
+                            <p>ムシキングにハマって、週一くらいでやっていましたね…懐かしい(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2006年</h3>
+                            <p>夏にポケモン映画を見る。</p>
+                            <br>
+                            <p>特に面白いことなかった(by航太朗)</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2007年</h3>
+                            <p>小学校に入学。</p>
+                            <p>階段で転んで持っていたビンを割り、そこに手をつき出血。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2008年</h3>
+                            <p>ニコニコ動画を見始める。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2009年</h3>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2010年</h3>
+                            <p>深夜アニメを初めて見る。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2011年</h3>
+                            <p>夏にポケモン映画を見る。</p>
+                            <p>小説の大賞に落ちる。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2012年</h3>
+                            <p>ブラウザオンラインゲームにハマる。</p>
+                            <p>チビクエストのトップランカーになる。
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2013年</h3>
+                            <p>転んでレンガに頭をぶつけて頭を割り病院へ。</p>
+                            <p>中学校に入学。中二病に目覚める。</p>
+                            <p>コバトンの中の人をやる。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2015年</h3>
+                            <p>転んで腕を骨折。</p>
+                            <p>RPGツクールを手に入れる。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2016年</h3>
+                            <p>高校に入学。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                            <p>ゲーム制作を始める。</p>
+                            <p>イラストを描き始める。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">20017年</h3>
+                            <p>コミックマーケットにサークル参加。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                            <p>小説の大賞に落ちる。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2018年</h3>
+                            <p>大学のAO入試に３回落ちる。</p>
+                            <p>夏にポケモン映画を見る。</p>
+                            <p>3Dモデルを作ってみた。</p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2019年</h3>
+                            <p>クラウドファンディングで6万円を集めてスキーに行く。</p>
+                            <p>日本電子で学ぶ。</p>
+                            <p></p>
+                        </div>
+                        <div class="section">
+                            <h3 class="space_sub2">2020年</h3>
+                            <p>就職する予定</p>
+                        </div>
+                    </div>
+                </article>
+                <div style="text-align: center; padding-top: 3px;"><small>Copyright © Kadekawa Koutarou</small></div>
+            </main>
+        </div>
+        <footer>
+            <div class="hm-menu-btn"></div>
+            <div class="footer"></div>
+        </footer>
+        <!--白ふわふわ-->
+        <script src="../js/snowfall.jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).snowfall({
+                flakeCount: 300,			// 要素の数
+                flakeColor: '#FFF',		// 要素の色
+                flakeIndex: -1,		// 要素のz-index
+                minSize: 3,				// 要素の最小サイズ
+                maxSize: 10,				// 要素の最大サイズ
+                minSpeed: 4,				// 要素の最小落下スピード
+                maxSpeed: 6,				// 要素の最大落下スピード
+                round: true,				// 要素に丸みを持たせる？
+                shadow: false				// 要素に影をつける？
+            });
+        </script>
+    </body>
+</html>

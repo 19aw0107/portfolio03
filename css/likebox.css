@@ -1,0 +1,31 @@
+@media screen and (min-width:1200px){
+    .like-box{
+        text-align: center
+    }
+    .like-box-image{
+        display: inline-block;
+        width: 340px;
+        margin: calc(120px / 6)
+    }
+    .like-box-br{
+        display: none
+    }
+}
+@media screen and (max-width:1200px){
+    .like-box{
+        text-align: center
+    }
+    .like-box-image{
+        display: inline-block;
+        width: 28%;
+        margin: calc(10% / 6)
+    }
+    .like-box-br{
+        display: none
+    }
+}
+@media screen and (max-width: 510px){
+    .like-box-br{
+        display: inline
+    }
+}

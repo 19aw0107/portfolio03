@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--サイトタイトル-->
+    <title>HOBBY | メガネさんのポートフォリオ</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--ローディング-->
+    <script>
+        $(function () {
+            var h = $(window).height();
+            $('#wrap').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
+        });
+        $(window).on("load", function () {
+            $('#loader-bg').delay(2000).fadeOut(800);
+            $('#loader').delay(1000).fadeOut(700);
+            $('#wrap').css('display', 'block');
+        });
+        $(function () {
+            setTimeout('stopload()', 1000);
+        });
+        function stopload() {
+            $('#wrap').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
+    </script>
+    <!--CSS::基本-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--CSS::ローディング-->
+    <link href="../css/loading.css" rel="stylesheet" type="text/css">
+    <!--CSS::スライドショー-->
+    <link rel="stylesheet" type="text/css" href="../css/slide2.css">
+    <!--CSS::プロフィール-->
+    <link href="../css/profilebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きな食べ物-->
+    <link href="../css/likebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアニメ-->
+    <link href="../css/card.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアーティスト-->
+    <link href="../css/artist.css" rel="stylesheet" type="text/css">
+    <!--CSS::文字揺れ-->
+    <link href="../css/moji-yure.css" rel="stylesheet" type="text/css">
+    <!--フォント-->
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <!--ハンバーガーメニュー-->
+    <link href="../css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.fatNav.js"></script>
+    <script>
+        $(function() {
+            $.fatNav();
+        });
+    </script>
+</head>
+<body>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/logo.png" alt="Now Loading" id="loader-img"/>
+            <div class="typewriter">
+                <p>Now Loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="fat-nav pc-none">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="../index.html" class="glitch" data-text="TOP PAGE">TOP PAGE</a></li>
+                <li><a href="index.html" class="glitch" data-text="HOBBY">HOBBY</a></li>
+                <li><a href="../history/index.html" class="glitch" data-text="HISTORY">HISTORY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrap">
+        <header>
+            <a href="../index.html" class="hd_logo">
+                <img src="../img/logo.png" alt="メガネ男のポートフォリオ" id="logo"/>
+            </a>
+        </header>
+        <main>
+            <div id="particleground">
+                <article class="main_column_sub"  id="particle">
+                    <section class="space_sub"></section>
+                    <section>
+                        <h2>好きな食べ物</h2>
+                        <div class="like-box">
+                            <h3 class="like-box-text">「卵料理」「ホットケーキ」<br class="like-box-br">「フレンチトースト」など</h3>
+                            <p class="like-box-p">
+                                <img src="../img/frenchtoast.png" class="like-box-image">
+                                <img src="../img/frenchtoast2.png" class="like-box-image">
+                                <img src="../img/hotcake.png" class="like-box-image">
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>好きなアーティストは？</h2>
+                        <h3>「HoneyWorks」です！</h3>
+                        <p>
+                            HoneyWorks（通称ハニワ）とは<br>
+                            楽曲・動画などを制作するクリエイターユニットです。<br>
+                            <br>
+                            僕がおすすめしたい曲は…<br>
+                        </p>
+                        <ul class="movie_3">
+                            <li class="last">
+                                <h4>「金曜日のおはよう」</h4>
+                                <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm23910729/script?w=320&h=180" alt="ハニワの動画リンク"></script>
+                                <noscript>
+                                    <a href="https://www.nicovideo.jp/watch/sm23910729">
+                                    ┗|∵|┓金曜日のおはよう／HoneyWorks feat.GUMI
+                                    </a>
+                                </noscript>
+                            </li>
+                            <li class="last">
+                                <h4>「私、アイドル宣言」</h4>
+                                <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm32825363/script?w=320&h=180"></script>
+                                <noscript>
+                                    <a href="https://www.nicovideo.jp/watch/sm32825363">
+                                    私、アイドル宣言／CHiCO with HoneyWorks
+                                    </a>
+                                </noscript>
+                            </li>
+                            <li class="last">
+                                <h4>「東京ウィンターセッション」</h4>
+                                <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm32352047/script?w=320&h=180"></script>
+                                <noscript>
+                                    <a href="https://www.nicovideo.jp/watch/sm32352047">
+                                    ┗|∵|┓東京ウインターセッション ／ HoneyWorks
+                                    </a>
+                                </noscript>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>好きなアニメ</h2>
+                        <div class="link-card-bg">
+                            <a href="http://www.haruhi.tv/" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="http://www6.nhk.or.jp/anime/program/common/images/haruhi/og_image.jpg" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>涼宮ハルヒの憂鬱</h3>
+                                        <p>
+                                            ｢この中に宇宙人、未来人、超能力者がいたら、あたしのところに来なさい。以上!｣<br>
+                                            入学早々、時を止めるような挨拶をした涼宮ハルヒ。<br>
+                                            そんなSF小説じゃあるまいし…と、誰でもそう思う…。しかしハルヒは心の底から真剣だった。<br>
+                                            それに気づいたキョンをとりまく日常は、もうすでに超常になっていた…。<br>
+                                            涼宮ハルヒが団長の学校未公式団体｢SOS団｣が繰り広げるSF風味の学園ストーリー。
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="https://www.tbs.co.jp/anime/k-on/k-on_tv/index-j.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="https://www.bs-tbs.co.jp/images/program/4464.jpg" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>けいおん！</h3>
+                                        <p>
+                                            廃部寸前の軽音楽部に入部した４人。主人公の平沢唯は、軽音楽を「軽い簡単な音楽」と勘違いし入部してしまう。<br>
+                                            ２年に進級すると１人の新入部員も加わり、目標は「武道館ライブ」と掲げつつも、毎日ゆるく、のんびりと過ごしていく。<br>
+                                            この5人を中心に描いた学園コメディー。
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="http://www.henneko.jp/" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="https://cs1.anime.dmkt-sp.jp/anime_kv/img/10/95/3/10953_1_d2.jpg" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>変態王子と笑わない猫</h3>
+                                        <p>
+                                            横寺陽人は頭の中身が煩悩まみれな高校二年生。ひょんなことで、“笑わない猫像”に祈ったら、心に思ったことがいつでもどこでも垂れ流しになってしまった! そんな人生のピンチを救ってくれたのは、クールでキュートな無表情娘、筒隠月子。<br>
+                                            猫像のせいで失われた本音と建前を取り戻す、爽やか変態×冷ややか少女の青春迷走ストーリーがいまはじまる!
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="http://ngnl.jp/tv/" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="https://cs1.anime.dmkt-sp.jp/anime_kv/img/11/26/0/11260_1_d2.jpg" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>ノーゲーム・ノーライフ</h3>
+                                        <p>
+                                            神によって異世界に召喚された空と白。<br>
+                                            そこは一切の争いが禁じられ、全てがゲームによって決まる世界だった！？<br>
+                                            原作・イラストの双方を手掛ける榎宮祐が放つ超弩級の頭脳バトル
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="http://www.bakatest.com/" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="https://cs1.anime.dmkt-sp.jp/anime_kv/img/10/01/1/10011_1_d2.jpg" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>バカとテストと召喚獣</h3>
+                                        <p>
+                                            進級テストの成績で厳しくクラス分けされる先進的な進学校｢文月学園｣。<br>
+                                            秀才が集まる設備も整ったAクラスに対して、最底辺のFクラスの設備はボロい卓袱台や腐った畳だけ。<br>
+                                            そんなFクラスの生徒である吉井明久は、訳あって同じクラスとなった健気な才女・姫路瑞希のため、学園が開発したシステムを使ったクラス争奪バトル｢試験召喚戦争｣に挑戦する。
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="link-card-bg">
+                            <a href="http://www.tbs.co.jp/anime/haganai/1st/index-j.html" style="text-decoration: none;">
+                                <div class="link-card">
+                                    <img src="https://cs1.anime.dmkt-sp.jp/anime_kv/img/11/40/1/11401_1_1.png" class="link-card-img">
+                                    <div class="link-card-text">
+                                        <h3>僕は友達が少ない</h3>
+                                        <p>
+                                            学園で浮いてしまっている羽瀬川小鷹は、いつも不機嫌そうな少女・三日月夜空が一人で楽しげに喋っているのを目撃する。小鷹は夜空とどうすれば友達が出来るか話し合うのだが、夜空は無駄な行動力で友達作りを目指す残念な部“隣人部”を作ってしまう。<br>
+                                            しかも何を間違ったか続々と残念な美少女達が入部してきて――。みんなでギャルゲーをやったりプールに行ったり携帯でメールしあったり。<br>
+                                            色々と迷走気味な彼らは本当に友達を作れるのか?アレげだけどやけに楽しい残念系青春ラブコメ!
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </article>
+                <div style="text-align: center; padding-top: 3px;"><small>Copyright © Kadekawa Koutarou</small></div>
+            </main>
+        </div>
+        <footer>   
+            <div class="hm-menu-btn"></div>
+            <div class="footer"></div>
+        </footer>
+        <!--白ふわふわ-->
+        <script src="../js/snowfall.jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).snowfall({
+                flakeCount: 300,			// 要素の数
+                flakeColor: '#FFF',		// 要素の色
+                flakeIndex: -1,		// 要素のz-index
+                minSize: 3,				// 要素の最小サイズ
+                maxSize: 10,				// 要素の最大サイズ
+                minSpeed: 4,				// 要素の最小落下スピード
+                maxSpeed: 6,				// 要素の最大落下スピード
+                round: true,				// 要素に丸みを持たせる？
+                shadow: false				// 要素に影をつける？
+            });
+        </script>
+    </body>
+</html>

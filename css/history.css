@@ -1,0 +1,11 @@
+.section {
+    text-align: center;
+    font-size: 200%;
+}
+.fp-tableCell {
+    display: inline
+}
+#fullpage p{
+    font-size: 28px;
+    margin: 5px
+}

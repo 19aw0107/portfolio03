@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--サイトタイトル-->
+    <title>HOBBY | メガネさんのポートフォリオ</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--ローディング-->
+    <script>
+        $(function () {
+            var h = $(window).height();
+            $('#wrap').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
+        });
+        $(window).on("load", function () {
+            $('#loader-bg').delay(2000).fadeOut(800);
+            $('#loader').delay(1000).fadeOut(700);
+            $('#wrap').css('display', 'block');
+        });
+        $(function () {
+            setTimeout('stopload()', 1000);
+        });
+        function stopload() {
+            $('#wrap').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
+    </script>
+    <!--CSS::基本-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--CSS::ローディング-->
+    <link href="../css/loading.css" rel="stylesheet" type="text/css">
+    <!--CSS::スライドショー-->
+    <link rel="stylesheet" type="text/css" href="../css/slide2.css">
+    <!--CSS::プロフィール-->
+    <link href="../css/profilebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きな食べ物-->
+    <link href="../css/likebox.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアニメ-->
+    <link href="../css/card.css" rel="stylesheet" type="text/css">
+    <!--CSS::好きなアーティスト-->
+    <link href="../css/artist.css" rel="stylesheet" type="text/css">
+    <!--CSS::文字揺れ-->
+    <link href="../css/moji-yure.css" rel="stylesheet" type="text/css">
+    <!--フォント-->
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <!--ハンバーガーメニュー-->
+    <link href="../css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.fatNav.js"></script>
+    <script>
+        $(function() {
+            $.fatNav();
+        });
+    </script>
+</head>
+<body>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/logo.png" alt="Now Loading" id="loader-img"/>
+            <div class="typewriter">
+                <p>Now Loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="fat-nav pc-none">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="../index.html" class="glitch" data-text="TOP PAGE">TOP PAGE</a></li>
+                <li><a href="index.html" class="glitch" data-text="HOBBY">HOBBY</a></li>
+                <li><a href="../history/index.html" class="glitch" data-text="HISTORY">HISTORY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrap">
+        <header>
+            <a href="../index.html" class="hd_logo">
+                <img src="../img/logo.png" alt="メガネ男のポートフォリオ" id="logo"/>
+            </a>
+        </header>
+        <main>
+            <div id="particleground">
+                <article class="main_column_sub"  id="particle">
+                    <section class="space_sub"></section>
+                    <section>
+                        <h2>このサイトで使った技術等の覚書</h2>
+                        <p>
+                            今回はVue.jsではなくjquery.jsを使いました。<br>
+                            このサイトでは前回とは違い、ハンバーガーメニューと全画面スライドショー、全画面スクロールページ、、、を一部ソースコードを参考にして作らせていただきました。<br>
+                            世界中の開発者様、ありがとうございます。<br>
+                            <br>
+                            ・サイトのデザインについて<br>
+                            今回のデザインは少し独特なものにしたいと考えたのですが、デザインが苦手な僕には難易度が高すぎて、とりあえずヘッダーとフッターだけ独特な形にしました。<br>
+                            テーマとしては某ロボットアニメのコックピット(操縦席)です。<br>
+                            サイトを見た人がパイロット…みたいな。そんなものを目指しました。<br>
+                            <br>
+                            ・ハンバーガーメニューについて<br>
+                            今回のハンバーガーメニューは「jQueryfatNav」というjQueryのプラグインを利用しました。<br>
+                            表示されるメニューはテキストにアニメーションをかけています。<br>
+                            イメージとしてはジャミングを受けているような感じ。<br>
+                            <br>
+                            ・全画面スライドショーについて<br>
+                            今回はCSSだけで動くスライドショーのコードを参考に作らせていただきました。<br>
+                            ページを開いてからのインパクトを与えたいという理由で作りました。<br>
+                            <br>
+                            ・全画面スクロールページについて<br>
+                            「fullPage.js」を使わせていただきました。<br>
+                            サイズは自分好みにカスタマイズしてあります。<br>
+                            <br>
+                            ・ローディング画面について<br>
+                            ローディング画面はページを移る際に、読み込みを待たせないように作りました。<br>
+                            画像が多いので結構重くなってしまったためです。<br>
+                            ロゴマークにはフィードインとフィードアウトをつけ、背景とともに出現して消えるようにしてあります。
+                        </p>
+                    </section>
+                </article>
+                <div style="text-align: center; padding-top: 3px;"><small>Copyright © Kadekawa Koutarou</small></div>
+            </main>
+        </div>
+        <footer>   
+            <div class="hm-menu-btn"></div>
+            <div class="footer"></div>
+        </footer>
+        <!--白ふわふわ-->
+        <script src="../js/snowfall.jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).snowfall({
+                flakeCount: 300,			// 要素の数
+                flakeColor: '#FFF',		// 要素の色
+                flakeIndex: -1,		// 要素のz-index
+                minSize: 3,				// 要素の最小サイズ
+                maxSize: 10,				// 要素の最大サイズ
+                minSpeed: 4,				// 要素の最小落下スピード
+                maxSpeed: 6,				// 要素の最大落下スピード
+                round: true,				// 要素に丸みを持たせる？
+                shadow: false				// 要素に影をつける？
+            });
+        </script>
+    </body>
+</html>
